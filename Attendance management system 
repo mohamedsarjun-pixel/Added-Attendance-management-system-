@@ -1,0 +1,26 @@
+attendance = {}
+
+while True:
+    print("\nAttendance Management System")
+    print("1. Mark Attendance")
+    print("2. View Attendance")
+    print("3. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        name = input("Enter Student Name: ")
+        status = input("Present or Absent (P/A): ")
+        attendance[name] = status
+
+    elif choice == "2":
+        print("\nAttendance Record")
+        for name, status in attendance.items():
+            print(name, ":", status)
+
+    elif choice == "3":
+        print("Thank You!")
+        break
+
+    else:
+        print("Invalid Choice")
